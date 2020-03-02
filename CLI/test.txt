@@ -1,0 +1,41 @@
+export const products = [
+    {
+      name: "Microm57",
+      pricingTier: "",
+      priceRange: "5k-8k",
+      weight: 20, // In grams,
+      availability: 100,
+      productUrl: "hps://e...conent-availahor-only...e.com/mma57",
+      isEditable: true
+    },
+    {
+      name: "Plus 6T",
+      pricingTier: "premier",
+      priceRange: "35k-45k",
+      weight: 200, // In grams
+      availability: 30,
+      productUrl: "https://e...content-available-to-author-only...e.com/op6t",
+      isEditable: true
+    },
+    {
+      name: "Redmi ",
+      pricingTier: "budget",
+      priceRange: "8k-11k",
+      weight: 150, // In grams
+      availbility: 50,
+      produtUrl: "https://e...coilthor-only..e.com/redmiu",
+      isEditable: true
+    }
+  ]
+  export const pricingInfo = {
+    budget: [
+      "4k-6k",
+      "5kk",
+      "8k1k"
+    ],
+    premier: [
+      "28 9k",
+      "30k-3k",
+      "35k-45k"
+    ]
+  }

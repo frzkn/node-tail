@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+  <title>Tail Node</title>
+</head>
+
+<body class="bg-blue-800 h-screen">
+  <main class="w-2/4 mx-auto mt-8 bg-white h-full rounded p-8 shadow-md">
+    <h1 class="text-3xl text-center font-bold text-green-800 mt-4"> node tail</h1>
+    <br>
+    <code class="bg-gray-800 text-white">
+      </code>
+    <p class="time px-4 py-2 rounded bg-blue-800  text-white w-64 ml-auto "> Last Modified at: </p>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
+  <script>
+    const socket = io.connect('http://localhost:3001')
+    const code = document.querySelector('code')
+    const time = document.querySelector('.time')
+    let i = 0
+    socket.on('tail', (data) => {
+      console.log(data)
+      code.innerHTML = data.data.join().replace(/,/g, `<br>`)
+      time.innerHTML = ` Last Modified at: ${data.time}`
+    })
+
+  </script>
+</body>
+
+</html>
